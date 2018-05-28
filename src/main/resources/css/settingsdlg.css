@@ -1,0 +1,66 @@
+.dialog-pane{
+    -fx-background-color: black;
+}
+.label .text{
+    -fx-fill: white;
+}
+#windowParent{
+    -fx-background-color: black;
+}
+#lblTitle{
+    -fx-text-fill: white;
+}
+#lblSpinSize{
+    -fx-text-fill: white;
+}
+.button{
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, white, 5, 0, 0, 0);
+    -fx-text-fill: black;
+}
+.split-pane{
+    -fx-background-color: #333;
+    -fx-border-color: #333;
+    -fx-border-width: 6px;
+}
+.split-pane .split-pane-divider{
+    -fx-background-color: black;
+}
+.color-picker{
+    -fx-background-color: #333;
+    -fx-background-insets: 0 0 2 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+.color-picker:hover{
+    -fx-background-color: white;
+}
+.color-picker:hover .text{
+    -fx-fill: black;
+}
+.color-picker .combo-box-popup{
+    -fx-background-color: #333;
+}
+.check-box .text{
+    -fx-fill: white;
+}
+.check-box .box{
+    -fx-background-insets: 0 0 2 0;
+}
+.scroll-pane{
+    -fx-background-color: #333;
+}
+.scroll-pane .scroll-bar{
+    -fx-background-color: #333;
+}
+.vbox{
+    -fx-background-color: #333;
+}
+#activebutton{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}

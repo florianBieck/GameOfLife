@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="windowParent" prefHeight="900.0" prefWidth="1300.0" stylesheets="@/css/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+       <VBox BorderPane.alignment="CENTER">
+           <MenuBar fx:id="mainMb">
+               <Menu fx:id="menuFile" mnemonicParsing="false" text="Datei">
+                   <MenuItem fx:id="menuFileNew" mnemonicParsing="false" text="Neu">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuFileOpen" mnemonicParsing="false" text="Öffnen">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuFileSaveAs" mnemonicParsing="false" text="Speichern unter...">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuFileSave" disable="true" mnemonicParsing="false" text="Speichern">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <SeparatorMenuItem mnemonicParsing="false"/>
+                   <MenuItem fx:id="menuFileExportCanvas" mnemonicParsing="false" text="Als PNG exportieren...">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuFileImportCanvas" mnemonicParsing="false" text="PNG importieren...">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <SeparatorMenuItem mnemonicParsing="false"/>
+                   <MenuItem fx:id="menuFileExit" mnemonicParsing="false" text="Beenden">
+                       <accelerator>
+                           <KeyCodeCombination alt="DOWN" code="ESCAPE" control="UP" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+               </Menu>
+               <Menu fx:id="menuEdit" mnemonicParsing="false" text="Bearbeiten">
+                   <MenuItem fx:id="menuEditGame" mnemonicParsing="false" text="Spielfeld bearbeiten">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuEditClearGame" mnemonicParsing="false" text="Spielfeld leeren">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+                   <MenuItem fx:id="menuEditInvertStatus" mnemonicParsing="false"
+                             text="Zellenstatus invertieren">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="J" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+               </Menu>
+               <Menu fx:id="menuAnalysis" mnemonicParsing="false" text="Analyse">
+                   <Menu fx:id="menuAnalysisCountObjects" mnemonicParsing="false" text="Objekte zählen">
+                       <MenuItem fx:id="menuAnalysisCountAll" mnemonicParsing="false" text="Alle">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT1" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountRect" mnemonicParsing="false" text="Rechtecke">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT2" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountCrosshair" mnemonicParsing="false"
+                                 text="Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT3" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountStretchedCrosshair" mnemonicParsing="false"
+                                 text="Hohe Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT4" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountArrow" mnemonicParsing="false" text="Pfeile">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT5" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountDoubledCrosshair" mnemonicParsing="false"
+                                 text="Doppelte Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT6" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisCountDiagonale" mnemonicParsing="false"
+                                 text="Diagonalen">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="DIGIT7" control="UP" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                   </Menu>
+                   <Menu fx:id="menuAnalysisMarkObjects" mnemonicParsing="false" text="Objekte markieren">
+                       <MenuItem fx:id="menuAnalysisMarkAll" mnemonicParsing="false" text="Alle">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkRect" mnemonicParsing="false" text="Rechtecke">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkCrosshair" mnemonicParsing="false"
+                                 text="Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT3" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkStretchedCrosshair" mnemonicParsing="false"
+                                 text="Hohe Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT4" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkArrow" mnemonicParsing="false" text="Pfeile">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT5" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkDoubledCrosshair" mnemonicParsing="false"
+                                 text="Doppelte Fadenkreuze">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT6" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem fx:id="menuAnalysisMarkDiagonale" mnemonicParsing="false"
+                                 text="Diagonalen">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="DIGIT7" control="DOWN" meta="UP"
+                                                   shift="UP" shortcut="UP"/>
+                           </accelerator>
+                       </MenuItem>
+                   </Menu>
+               </Menu>
+               <Menu fx:id="menuOptions" mnemonicParsing="false" text="Optionen">
+                   <CheckMenuItem fx:id="menuOptionsLabels" mnemonicParsing="false" text="Show Labels"/>
+                   <CheckMenuItem fx:id="menuOptionsBorders" mnemonicParsing="false" selected="true"
+                                  text="Show Borders"/>
+                   <MenuItem fx:id="menuOptionsSettings" mnemonicParsing="false" text="Einstellungen">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+               </Menu>
+               <Menu fx:id="menuHelp" mnemonicParsing="false" text="Hilfe">
+                   <MenuItem fx:id="menuHelpAbout" mnemonicParsing="false" text="About">
+                       <accelerator>
+                           <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP"
+                                               shortcut="UP"/>
+                       </accelerator>
+                   </MenuItem>
+               </Menu>
+           </MenuBar>
+           <HBox fx:id="hbTools" alignment="CENTER" spacing="25.0">
+               <VBox.margin>
+                   <Insets/>
+               </VBox.margin>
+               <padding>
+                   <Insets bottom="10.0" left="25.0" right="25.0" top="10.0"/>
+               </padding>
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="25.0"
+                     HBox.hgrow="ALWAYS">
+                   <VBox fx:id="vbGeneration" alignment="CENTER" layoutX="451.0" layoutY="10.0" spacing="15.0">
+                       <HBox.margin>
+                           <Insets/>
+                       </HBox.margin>
+                       <Label fx:id="lblGeneration" text="Generation"/>
+                       <HBox spacing="25.0">
+                           <VBox fx:id="vbSwitch" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivSwitch" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label fx:id="lblSwitch" alignment="CENTER" minWidth="100.0"
+                                      prefWidth="100.0" text="Start (F9)"/>
+                           </VBox>
+                           <VBox fx:id="vbSkipBack" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivSkipBack" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label alignment="CENTER" minWidth="100.0" text="Zurück (F6)"/>
+                           </VBox>
+                           <VBox fx:id="vbSkip" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivSkip" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label alignment="CENTER" minWidth="100.0" text="Nächste (F7)"/>
+                           </VBox>
+                       </HBox>
+                   </VBox>
+                   <Separator orientation="VERTICAL">
+                       <padding>
+                           <Insets top="15.0"/>
+                       </padding>
+                   </Separator>
+                   <VBox fx:id="vbToggles" alignment="CENTER" spacing="15.0">
+                       <Label fx:id="lblToggles" text="Darstellung"/>
+                       <HBox spacing="25.0">
+                           <VBox spacing="25.0">
+                               <padding>
+                                   <Insets top="13.0"/>
+                               </padding>
+                               <CheckBox fx:id="cbLabels" minWidth="100.0" mnemonicParsing="false"
+                                         text="Nachbaranzahl (F10)"/>
+                               <CheckBox fx:id="cbBorders" minWidth="100.0" mnemonicParsing="false"
+                                         selected="true" text="Zellgrenzen (F12)"/>
+                           </VBox>
+                           <VBox fx:id="vbFullscreen" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivFullscreen" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label alignment="CENTER" minWidth="100.0" text="Vollbild (F11)"/>
+                           </VBox>
+                       </HBox>
+                   </VBox>
+                   <Separator layoutX="320.0" layoutY="10.0" orientation="VERTICAL">
+                       <padding>
+                           <Insets top="15.0"/>
+                       </padding>
+                   </Separator>
+                   <VBox fx:id="vbTools" alignment="CENTER" spacing="15.0">
+                       <Label fx:id="lblTools" text="Werkzeuge"/>
+                       <HBox spacing="25.0">
+                           <VBox fx:id="vbBrush" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivBrush" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label alignment="CENTER" minWidth="100.0" text="Beleben (B)"/>
+                           </VBox>
+                           <VBox fx:id="vbEraser" alignment="CENTER" spacing="15.0">
+                               <ImageView fx:id="ivEraser" fitHeight="48.0" fitWidth="48.0"
+                                          pickOnBounds="true" preserveRatio="true"/>
+                               <Label alignment="CENTER" minWidth="100.0" text="Töten (T)"/>
+                           </VBox>
+                       </HBox>
+                   </VBox>
+               </HBox>
+               <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                   <ProgressIndicator fx:id="piGeneration"/>
+               </HBox>
+           </HBox>
+       </VBox>
+   </top>
+   <center>
+      <Pane fx:id="gamePane" style="-fx-background-color: lightgrey;" />
+   </center>
+</BorderPane>

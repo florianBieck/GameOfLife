@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<DialogPane fx:id="dialogPane" stylesheets="@/css/gamedlg.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <BorderPane fx:id="windowParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+         <top>
+            <Label fx:id="lblTitle" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Neues Spielfeld erstellen" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+               <Button fx:id="btnCreate" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Erstellen"/>
+               <Button fx:id="btnCancel" layoutX="160.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0"
+                       prefWidth="100.0" text="Abbrechen"/>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <Label fx:id="lblSpinSize" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="10.0"
+                      text="Feldgröße">
+                  <font>
+                     <Font size="16.0"/>
+                  </font>
+                  <graphic>
+                     <Spinner fx:id="spinSize" prefWidth="150.0"/>
+                  </graphic>
+               </Label>
+            </VBox>
+         </center>
+      </BorderPane>
+   </content>
+</DialogPane>

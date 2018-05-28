@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<DialogPane fx:id="dialogPane" stylesheets="@/css/messagedlg.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <BorderPane fx:id="windowParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0">
+         <top>
+            <Label fx:id="lblTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="75.0" text="Messagetitle" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+               <Button fx:id="btnYes" layoutX="150.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0"
+                       prefWidth="100.0" text="Ja"/>
+               <Button fx:id="btnNo" layoutX="75.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0"
+                       prefWidth="100.0" text="Nein"/>
+               <Button fx:id="btnClose" layoutX="160.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0"
+                       prefWidth="100.0" text="Schließen"/>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
+               <ImageView fx:id="ivImg" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"/>
+               <Label fx:id="lblMsg" prefHeight="150.0" prefWidth="200.0" text="Message" wrapText="true"/>
+            </HBox>
+         </center>
+      </BorderPane>
+   </content>
+</DialogPane>
